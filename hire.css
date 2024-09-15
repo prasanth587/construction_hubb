@@ -1,0 +1,99 @@
+/* General Container for all profiles */
+.profiles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Container to center the heading */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Available Profiles Heading */
+.Available {
+    font-family: 'Roboto', sans-serif; /* Change to desired font */
+    font-size: 32px;
+    color:whitesmoke;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.Available::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: orange; /* Blue underline */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+/* Each profile card */
+.profile-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for profile cards */
+.profile-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container */
+.profile-image-container {
+    flex: 0 0 120px;
+    margin-right: 20px;
+}
+
+.profile-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+/* Profile details (right side content) */
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 29px;
+    color: #333;
+}
+
+.profile-details button.hireBtn {
+    background-color:orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-details button.hireBtn:hover {
+    background-color: orangered;
+}

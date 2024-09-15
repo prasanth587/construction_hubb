@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <img src="../logo/logo_transparent.png" alt="C_HUB Logo" class="logo">
+    
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                  <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Profile</a>
+                        <div class="dropdown-content">
+                            <a href="profile.html">Create Profile</a>
+                            <a href="displayProfile.html">Edit Profile</a>
+                        </div>
+                    </li>
+               
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="hire.html">Hire</a></li>
+                    <li><a href="login.html" class="btn login-btn" id="otp">Login</a></li>
+                    <li><a href="signup.html" class="btn signup-btn" id="otp">Sign Up</a></li>
+           
+                
+              
+            </ul>
+          
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Your Profile</h2>
+
+        <!-- Display Profile Info -->
+        <div id="profileDisplay" style="display: none;">
+            <img id="displayImage" src="" alt="Profile Image" width="150" height="150">
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone Number:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Bio:</strong> <span id="displayBio"></span></p>
+            <p><strong>Country:</strong> <span id="displayCountry"></span></p>
+            <p><strong>State:</strong> <span id="displayState"></span></p>
+            <p><strong>Profession:</strong> <span id="displayProfession"></span></p>
+            <p><strong>Daily Charges:</strong> <span id="displayCharges"></span></p>
+        </div>
+
+        <button id="editProfileBtn" class="btn">Edit Profile</button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Construction_Hub</h3>
+                <p>Platform for hiring skilled laborers across various professions.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="hire.html">Hire Labor</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                  <a href="#"><img src="https://i.pinimg.com/236x/70/da/29/70da29e0cd3e98f2ba4bb67bd0bde726.jpg" alt="Facebook"></a>
+                  <a href="#"><img src="https://i.pinimg.com/236x/69/b9/bf/69b9bf82f240f596319e3311c4c38666.jpg" alt="Twitter"></a>
+                  <a href="#"><img src="https://i.pinimg.com/236x/fd/fa/dd/fdfadd56cb3ea0ae5ad45cb3fabc0e18.jpg" alt="LinkedIn"></a>
+                  <a href="#"><img src="https://i.pinimg.com/236x/19/42/d5/1942d5deb0f788e6228054cd92767ff6.jpg" alt="Instagram"></a> <!-- Instagram Icon Added -->
+                  <!-- Add more social icons as needed -->
+              </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Construction_hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="displayProfile.js"></script>
+</body>
+</html>

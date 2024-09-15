@@ -1,0 +1,285 @@
+.how-it-works {
+    background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+    padding: 60px 20px;
+}
+
+.how-it-works .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    color: #444;
+}
+
+.how-it-works p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.how-it-works-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.how-it-works-info {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-it-works-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works-info h3 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #333;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    background-color: orange;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    flex-shrink: 0;
+}
+
+.step-content {
+    text-align: left;
+}
+
+.step-content h4 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.step-content p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.video-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.video-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    max-width: 850px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .how-it-works .container {
+        padding: 0 15px;
+    }
+
+    .how-it-works h2 {
+        font-size: 2.5em;
+    }
+
+    .how-it-works p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 992px) {
+    .how-it-works-content {
+        flex-direction: column;
+    }
+
+    .how-it-works-info {
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+
+    .how-it-works-info h3 {
+        font-size: 1.8em;
+    }
+
+    .steps {
+        gap: 15px;
+    }
+
+    .step {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+    }
+
+    .step-content h4 {
+        font-size: 1.2em;
+    }
+
+    .step-content p {
+        font-size: 1em;
+    }
+
+    .video-section h3 {
+        font-size: 2em;
+    }
+
+    .video-section p {
+        font-size: 1em;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works .container {
+        padding: 0 10px;
+    }
+
+    .how-it-works h2 {
+        font-size: 2em;
+    }
+
+    .how-it-works p {
+        font-size: 1em;
+    }
+
+    .how-it-works-info {
+        padding: 20px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+    }
+
+    .step-content h4 {
+        font-size: 1.1em;
+    }
+
+    .step-content p {
+        font-size: 0.9em;
+    }
+
+    .video-section h3 {
+        font-size: 1.8em;
+    }
+
+    .video-section p {
+        font-size: 0.9em;
+    }
+
+    .video-container {
+        padding-top: 75%; /* Adjust aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works h2 {
+        font-size: 1.8em;
+    }
+
+    .how-it-works p {
+        font-size: 0.9em;
+    }
+
+    .how-it-works-info {
+        padding: 15px;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+
+    .step-content h4 {
+        font-size: 1em;
+    }
+
+    .step-content p {
+        font-size: 0.8em;
+    }
+
+    .video-section h3 {
+        font-size: 1.6em;
+    }
+
+    .video-section p {
+        font-size: 0.8em;
+    }
+}

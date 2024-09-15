@@ -1,0 +1,83 @@
+.contact-form:hover {
+    transform: rotateY(15deg) rotateX(5deg);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.contact-input, .contact-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.contact-submit-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.contact-submit-btn:hover {
+    background-color: darkorange;
+  
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Animation */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff6347, #ffab61, #ffd65c, #ffab61, #ff6347);
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: backgroundMove 5s linear infinite;
+    filter: blur(100px);
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+}

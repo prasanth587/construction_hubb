@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Hub</title>
+    <style>
+        /* Main Body and Container Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Light background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Heading Styling */
+        h1 {
+            color: #333;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            background-color: #ffa500; /* Orange */
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect for buttons */
+        .btn:hover {
+            background-color: #ff8c00; /* Dark Orange */
+            transform: translateY(-5px); /* Button lift on hover */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Animation: Ripple Effect */
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 140, 0, 0.4); /* Ripple color */
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s ease-out;
+        }
+
+        /* Ripple effect on hover */
+        .btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+        }
+
+        /* Animation keyframes for heading */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation keyframes for container fade in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Construction Hub</h1>
+        <div class="nav-links">
+            <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            <a href="login.html" class="btn login-btn">Login</a>
+        </div>
+    </div>
+</body>
+</html>

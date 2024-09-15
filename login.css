@@ -1,0 +1,92 @@
+/* Outer Container for full page centering */
+#outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background animation */
+#outer-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #ff6347, #ffab61, #ffd65c, #ffab61, #ff6347);
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: backgroundMove 5s linear infinite;
+    filter: blur(100px);
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Login Container */
+#login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure it stays above animated background */
+}
+
+/* Title Styling */
+#login-title {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.form-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Input Styling */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+#login-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #login-container {
+        padding: 15px;
+    }
+}
